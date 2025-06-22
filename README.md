@@ -4,6 +4,13 @@ This project predicts the final score of an IPL (Indian Premier League) team dur
 
 ---
 
+---
+## 📷 Prediction Screenshot
+
+Here is an example of the model predicting the final IPL score based on match inputs:
+
+![IPL Score Prediction Output](output-images/model_output.png)
+
 ## 1. 📦 Installing Libraries
 
 We are importing all necessary Python libraries such as NumPy, Pandas, Scikit-learn, Matplotlib, Keras and Seaborn required for data handling, visualization, preprocessing and building deep learning models.
@@ -104,12 +111,7 @@ We build an interactive interface using ipywidgets so users can select match det
 - `predict_score()` function handles user inputs, encodes and scales them, runs prediction and displays result.  
 - `display()` shows widgets in the notebook.
 - 
----
-## 📷 Prediction Screenshot
 
-Here is an example of the model predicting the final IPL score based on match inputs:
-
-![IPL Score Prediction Output](output-images/model_output.png)
 
 ---
 
