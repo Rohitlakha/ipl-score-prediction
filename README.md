@@ -96,6 +96,8 @@ To run this project locally:
 git clone https://github.com/Rohitlakha/ipl-score-prediction.git
 cd ipl-score-prediction
 
+```
+
 2️⃣ Install Required Libraries
 
 pip install -r requirements.txt
