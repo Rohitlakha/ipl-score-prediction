@@ -1,123 +1,97 @@
-# 🏏 IPL Score Prediction Using Deep Learning
+# 🏏 IPL Score Prediction using Deep Learning
 
-This project predicts the final score of an IPL (Indian Premier League) team during a T20 match using a deep learning model. It uses match features like venue, teams, wickets, overs, and more to generate accurate predictions. The model is trained on past IPL data and provides an interactive way to test predictions using ipywidgets.
-
----
-
----
-## 📷 Prediction Screenshot
-
-Here is an example of the model predicting the final IPL score based on match inputs:
-
-![IPL Score Prediction Output](output-images/model_output.png)
-
-## 1. 📦 Installing Libraries
-
-We are importing all necessary Python libraries such as NumPy, Pandas, Scikit-learn, Matplotlib, Keras and Seaborn required for data handling, visualization, preprocessing and building deep learning models.
+Cricket is no longer just about instincts — it's about **data-driven decisions**. In high-stakes matches like the Indian Premier League (IPL), every run, every over, and every wicket can shift the momentum. This project uses deep learning to predict the final score of a batting team in a T20 match, based on real-time inputs like overs, runs, wickets, and team details.
 
 ---
 
-## 2. 📂 Loading the Dataset
+## ❓ Why Use Deep Learning for Score Prediction?
 
-The dataset can be downloaded from here. It contains data from 2008 to 2017 and contains features like venue, date, batting and bowling team, names of batsman and bowler, wickets and more. We will load the IPL cricket data from CSV files into pandas DataFrames to explore and prepare for modeling.
+While traditional ML models struggle with complex data, deep learning excels:
 
----
-
-## 3. 📊 Exploratory Data Analysis
-
-We will do Exploratory Data Analysis (EDA) to analyze how many unique matches have been played at each venue by counting distinct match IDs for every venue. Then, we’ll visualize this data using a horizontal bar chart to see which venues host the most matches.
-
----
-
-## 4. 🔤 Performing Label Encoding
-
-We will convert categorical text data into numeric labels using Label Encoding because ML models work with numbers.
-
-- `LabelEncoder()` converts text labels into integers.  
-- `fit_transform()` learns encoding and applies it.  
-- `copy()` : creates a duplicate of the DataFrame to avoid changing the original data  
-- A dictionary assignment stores each encoder for future use like decoding or consistent transformation
+- 📈 **Pattern Recognition**: Learns from historical IPL datasets automatically  
+- ⚡ **Multivariate Analysis**: Handles many inputs like teams, overs, venue, wickets  
+- 🎯 **High Accuracy**: Outperforms simpler models by capturing non-linear relationships  
+- 🧠 **Real-Time Use**: Ideal for broadcasters, analysts, apps, and fantasy platforms
 
 ---
 
-## 5. 🧾 Performing Feature Selection
+## ✨ Project Highlights
 
-We drop `date` and `mid` columns because they are identifiers and don’t provide meaningful information for correlation analysis. By removing these irrelevant columns we focus on features that can reveal relationships useful for modeling or insights.
-
-- `drop()` : removes specified columns from the DataFrame  
-- `corr()` : computes pairwise correlations between numerical features  
-- `sns.heatmap()` : creates a colored matrix to visualize correlations with values  
-- `plt.show()` : displays the plot on screen
-
----
-
-## 6. ✂️ Splitting the Dataset into Training and Testing
-
-We will select relevant features and the target variable then split the data into training and testing sets for model building and evaluation.
-
-- `data_encoded[feature_cols]` : selects specified columns as features  
-- `train_test_split()` : splits features and target into training and test subsets  
-- `test_size=0.3` : assigns 30% of data for testing  
-- `random_state=42` : ensures reproducible splits by fixing the random seed
+- ✅ Deep Neural Network (DNN) built using **TensorFlow (Keras)**
+- 🧼 Preprocessing: Label Encoding, Feature Scaling, Feature Selection
+- 📊 Visualizations using **Matplotlib** and **Seaborn**
+- 🧪 Evaluated with **Mean Absolute Error (MAE)**
+- 🖱️ Interactive prediction using **ipywidgets**
+- 📁 Historical data: IPL seasons **2008 to 2017**
 
 ---
 
-## 7. ⚖️ Performing Feature Scaling
+## 📸 Screenshots
 
-We will perform Min-Max scaling on our input features to ensure all the features are on the same scale. It ensures consistent scale and improves model performance. Scaling will be done on both training and testing data using the scaling parameters.
+### 🎯 Prediction Output
 
-- `MinMaxScaler()` scales features to [0,1] range.  
-- `fit_transform()` fits scaler on training data and transforms it.  
-- `transform()` applies same scaler to test data.
+> A live prediction of the final score based on match conditions:
 
----
+![Prediction Screenshot](output-images/model_output.png)
 
-## 8. 🧠 Building the Neural Network
+### 📉 Model Training (Optional)
 
-We will build neural network using TensorFlow and Keras for regression. After building the model we have compiled the model using the Huber Loss because of the robustness of the regression against outliers.
+> MAE and loss over training epochs:
 
-- `keras.Sequential()` creates a stack of layers.  
-- `Dense` layers are fully connected layers.  
-- `activation='relu'` adds non-linearity.  
-- Output layer uses `activation='linear'` because it’s regression.  
-- **Huber loss** combines MSE and MAE advantages to handle outliers better.  
-- `adam` optimizer adjusts weights efficiently.
+![Training Loss](output-images/2.png)
 
 ---
 
-## 9. 🏋️ Training the Model
+## 🔧 Project Pipeline
 
-We train the model on the scaled training data for 10 epochs with a batch size of 64, validating on the test set.
+### 📦 Installing Libraries
 
-- `model.fit()` trains the model.  
-- `epochs=10` means the model sees the whole data 10 times.  
-- `batch_size=64` updates weights after every 64 samples.  
-- `validation_data` evaluates model on test set during training.
+Import required libraries such as:
+
+- `numpy`, `pandas` – Data processing  
+- `matplotlib`, `seaborn` – Visualizations  
+- `scikit-learn` – Preprocessing & model tools  
+- `tensorflow.keras` – Deep learning model  
+- `ipywidgets` – Interactive input for predictions
+
+### 📂 Loading the Dataset
+
+- Load IPL dataset from 2008–2017  
+- Contains batting/bowling teams, venue, players, overs, wickets, etc.  
+- Load data with `pandas.read_csv()` into DataFrame
+
+### 🔤 Encoding
+
+- Apply **Label Encoding** to convert text into numbers  
+- Store encoders in a dictionary for consistent transformation  
+- Ensure all categorical columns are transformed correctly
+
+### 🏋️‍♂️ Training
+
+- Features selected and split using `train_test_split()`  
+- Scale features using `MinMaxScaler`  
+- Neural network architecture: `Sequential`, `Dense`, `ReLU`, `Linear`  
+- Compiled with **Huber Loss** and **Adam optimizer**
+
+### 📈 Evaluation
+
+- Evaluate model on test set using **Mean Absolute Error (MAE)**  
+- Predict and compare actual vs predicted scores
+
+### 🖱️ Interactive Widget
+
+- Built using `ipywidgets.Dropdown`, `Button`, `display()`  
+- Users select real-time match conditions to predict final score  
+- Widget automatically encodes inputs, applies scaler, and predicts
 
 ---
 
-## 10. 📈 Evaluating the Model
+## 🚀 How to Run This Project
 
-We predict scores on test data and evaluate model performance using mean absolute error (MAE).
+To run this project locally:
 
----
+### 1️⃣ Clone the Repository
 
-## 11. 🖱️ Creating an Interactive Widget for Score Prediction
-
-We build an interactive interface using ipywidgets so users can select match details and get a live predicted score.
-
-- `widgets.Dropdown()` creates dropdown menus.  
-- `widgets.Button()` creates a clickable button.  
-- `predict_score()` function handles user inputs, encodes and scales them, runs prediction and displays result.  
-- `display()` shows widgets in the notebook.
-- 
----
-
-## 📬 Author
-
-**Rohit Lakha**  
-🔗 [LinkedIn](https://www.linkedin.com/in/rohit-lakha/) • 🔗 [GitHub](https://github.com/Rohitlakha)
-
----
-
-> ⭐ If you like this project, give it a star on GitHub and feel free to contribute!
+```bash
+git clone https://github.com/Rohitlakha/ipl-score-prediction.git
+cd ipl-score-prediction
