@@ -95,10 +95,61 @@ To run this project locally:
 ```bash
 git clone https://github.com/Rohitlakha/ipl-score-prediction.git
 cd ipl-score-prediction
+```
+
+### 2️⃣ Install Required Libraries
+
+```bash
+pip install -r requirements.txt
+```
+If not available:
+
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn tensorflow ipywidgets
 
 ```
 
-2️⃣ Install Required Libraries
+### 3️⃣ Run the Notebook
 
-pip install -r requirements.txt
+```bash
+jupyter notebook ipl_score_prediction.ipynb
+
+```
+Or run the script:
+
+```bash
+jupyter notebook ipl_score_prediction.ipynb
+
+```
+
+### 4️⃣ Use the Interactive Widget
+Scroll to the bottom of the notebook. Use the dropdowns to input match conditions and get live score predictions!
+
+## 🌐 Real-World Applications
+
+- 🏏 **Team Strategy**: Make informed in-game decisions using predictive analytics  
+- 📺 **Broadcasting**: Enhance live commentary with predicted scores and insights  
+- 📊 **Fantasy Leagues**: Support fantasy player picks and match predictions  
+- 📱 **Apps**: Integrate the prediction engine in mobile or web cricket analytics platforms  
+
+---
+
+## 🌱 Future Improvements
+
+- 🔍 Use **LSTM** or other time-series models for sequential data prediction  
+- 📈 Include additional data such as **player stats**, **match history**, and **weather conditions**  
+- 🧪 Perform thorough **hyperparameter tuning** and **model optimization**  
+- 🌐 Deploy as a **web app or API** using **Streamlit**, **Flask**, or **FastAPI**  
+
+---
+
+## 🙋 Author
+
+**Rohit Lakha**  
+🔗 [LinkedIn](https://github.com/Rohitlakha) • 🔗 [GitHub](https://www.linkedin.com/in/rohit-lakha/)
+
+---
+
+⭐ *Star this repo if you find it helpful or interesting!*
+
 
