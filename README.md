@@ -109,7 +109,7 @@ We build an interactive interface using ipywidgets so users can select match det
 
 Here is an example of the model predicting the final IPL score based on match inputs:
 
-![IPL Score Prediction Output](output_images/model_output.png)
+![IPL Score Prediction Output](output-images/model_output.png)
 
 ---
 
