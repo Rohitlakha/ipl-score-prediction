@@ -140,6 +140,7 @@ jupyter notebook ipl_score_prediction.ipynb
 ##4️⃣ Use the Interactive Widget
 Scroll to the bottom of the notebook and use the interactive UI to input match conditions and view live predictions.
 
+---
 
 ## 📬 Author
 
