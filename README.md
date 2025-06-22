@@ -146,7 +146,7 @@ Scroll to the bottom of the notebook. Use the dropdowns to input match condition
 ## 🙋 Author
 
 **Rohit Lakha**  
-🔗 [LinkedIn](https://github.com/Rohitlakha) • 🔗 [GitHub](https://www.linkedin.com/in/rohit-lakha/)
+🔗 [LinkedIn](https://www.linkedin.com/in/rohit-lakha/) • 🔗 [GitHub](https://github.com/Rohitlakha)
 
 ---
 
