@@ -103,6 +103,13 @@ We build an interactive interface using ipywidgets so users can select match det
 - `widgets.Button()` creates a clickable button.  
 - `predict_score()` function handles user inputs, encodes and scales them, runs prediction and displays result.  
 - `display()` shows widgets in the notebook.
+- 
+---
+## 📷 Prediction Screenshot
+
+Here is an example of the model predicting the final IPL score based on match inputs:
+
+![IPL Score Prediction Output](images/model_output.png)
 
 ---
 
