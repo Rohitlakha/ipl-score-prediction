@@ -86,6 +86,42 @@ Import required libraries such as:
 
 ---
 
+## ⚙️ How to Run This Project on Google Colab
+
+Follow these simple steps to run the IPL Score Prediction project in Google Colab:
+
+1. 📥 **Download the Project**
+
+   - Click the green **`Code`** button at the top of this repository.
+   - Select **`Download ZIP`** and extract it to your local system.
+
+2. 🔐 **Login or Create a Google Colab Account**
+
+   - Go to [Google Colab](https://colab.research.google.com/)
+   - Sign in with your Google account or create one if needed.
+
+3. 📂 **Upload and Open the `.ipynb` File**
+
+   - Click **`File > Upload Notebook`** and select the `ipl_score_prediction.ipynb` file from the downloaded folder.
+
+4. 📄 **Import the Dataset**
+
+   - Make sure the dataset CSV file (e.g., `ipl.csv`) is uploaded in the same runtime using:
+     ```python
+     from google.colab import files
+     files.upload()
+     ```
+
+5. ▶️ **Run the Code**
+
+   - Run each cell one by one.
+   - The notebook will preprocess data, train the model, and show the prediction output.
+
+---
+
+✅ That’s it! You can now test score predictions interactively right in your browser.
+
+
 ## 🚀 How to Run This Project
 
 To run this project locally:
