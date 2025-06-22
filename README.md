@@ -148,13 +148,13 @@ pip install numpy pandas matplotlib seaborn scikit-learn tensorflow ipywidgets
 ### 3️⃣ Run the Notebook
 
 ```bash
-jupyter notebook ipl_score_prediction.ipynb
+jupyter notebook IPL_Score_Prediction_using_DL.ipynb
 
 ```
 Or run the script:
 
 ```bash
-jupyter notebook ipl_score_prediction.ipynb
+jupyter notebook IPL_Score_Prediction_using_DL.ipynb
 
 ```
 
