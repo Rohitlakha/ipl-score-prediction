@@ -34,7 +34,7 @@ While traditional ML models struggle with complex data, deep learning excels:
 
 ![Prediction Screenshot](output-images/model_output.png)
 
-### 📉 Model Training (Optional)
+### 📉 Model Training 
 
 > MAE and loss over training epochs:
 
